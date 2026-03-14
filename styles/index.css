@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+ 
+}
+/* header */
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+/* navbar */
+nav{
+    display: flex;
+    /* justify-content: space-between; */
+   padding: 51px 0;
+
+}
+
+.menu{
+    display: flex;
+    padding: 2px;
+    list-style: none;
+    text-decoration: underline;
+}
+
+.menu li a {
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.nav-btn-login {
+    
+    border:1x solid rgba(208, 213, 221, 1);
+    border-radius: 24px;
+    padding: 8px 27px;
+}
+.nav-btn-book {
+    
+    border-radius: 24px;
+    padding: 8px 27px;
+    color: #A657E7;
+    border: 1px solid #A657E7;
+}
