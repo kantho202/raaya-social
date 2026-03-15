@@ -1,48 +1,138 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
- 
+body {}
+
+/* font  */
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+
 }
+
+.nunito {
+    font-family: "Nunito", sans-serif;
+}
+
 /* header */
-header{
-    display: flex;
-    justify-content: space-between;
+header {
+    /* display: flex; */
     margin-left: 120px;
     margin-right: 120px;
 }
+
 /* navbar */
-nav{
+nav {
     display: flex;
-    /* justify-content: space-between; */
-   padding: 51px 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+    width: 100%;
 
 }
 
-.menu{
+.menu {
     display: flex;
-    padding: 2px;
     list-style: none;
-    text-decoration: underline;
+    gap: 32px;
 }
 
 .menu li a {
     padding: 10px;
-    text-decoration: underline;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(52, 64, 84, 1);
 }
 
 .nav-btn-login {
-    
-    border:1x solid rgba(208, 213, 221, 1);
+    margin-right: 12px;
+    font-size: 18px;
+    border: 1px solid #D0D5DD;
     border-radius: 24px;
     padding: 8px 27px;
 }
-.nav-btn-book {
-    
+
+.btn-book {
+    font-size: 18px;
     border-radius: 24px;
     padding: 8px 27px;
     color: #A657E7;
     border: 1px solid #A657E7;
+}
+
+/* banner */
+.banner {
+    padding-top: 80px;
+}
+.banner-section-one{
+    display: flex;
+    gap: 28px;
+}
+.banner-icon-title{
+    display: flex;
+    gap: 12px;
+}
+.banner-title {
+    font-weight: 400;
+    font-size: 16px;
+   
+    color: #344054;
+}
+.banner-subtitle {
+    font-size:48px ;
+    font-weight: 600;
+    
+}
+.banner-gradient-text{
+
+    background: linear-gradient(to right, #2B034D, #B564F7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.banner-gradient-text-2{
+    background: linear-gradient(to right, #2B034D, #B564F7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.banner-number{
+    color: #D32E23;
+}
+.banner-btn {
+    margin-top: 28px;
+    margin-right: 24px;
+    padding: 8px 27px;
+    background-color: #A657E7;
+    border-radius: 24px;
+    border: none;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.text-description {
+    color: #344054;
+}
+.banner-right{
+    display: flex;
+    gap: 20px;
+}
+.banner-right-title{
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+}
+.banner-icon{
+    display: grid;
+    padding-top: 36px;
+    padding-bottom: 60px;
+    background-color: #FFFFFF;
+    justify-content:end;
+}
+.social-icon{
+    padding-top: 12px;
+    display: flex;
+    gap: 32px;
+    
 }
