@@ -596,18 +596,41 @@ main {
     font-weight: 700;
     font-size: 48px;
 }
-.client-title-color{
+.client-title-color {
     color: #A554E6;
 }
-.client-photo{
-    display: flex ;
-    gap: 16px;
+
+.client-photo {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+.client-review{
+    display: flex;
+    padding: 24px 37px;
 }
 .client-photo img {
     width: 100%;
-    height: auto;
+    height: 320px;
+    object-fit: cover;
     border-radius: 12px;
     display: block;
+}
+
+.client-name{
+    font-weight: 600;
+    font-size: 18px;
+}
+.client-review-name-photo{
+    display: flex;
+    gap: 12px;
+}
+.client-review-contain{
+    display: flex;
+    gap: 8px;
+}
+.client-review-star{
+    color: #1D2939;
 }
 /* Responsive */
 @media (max-width: 1024px) {
