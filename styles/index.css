@@ -185,6 +185,7 @@ main{
 }
 
 .creative-provide{
+    display: flex;
     background-color: #FFFFFF;
     padding: 28px 24px;
 }
@@ -202,12 +203,12 @@ main{
     margin-bottom: 24px;
 }
 
-.creative-left-title img {
+/* .creative-left-title img {
     width: 32px;
     height: 32px;
     object-fit: contain;
     flex-shrink: 0;
-}
+} */
 
 .creative-left-subtitle{
     display: flex;
@@ -223,7 +224,20 @@ main{
     flex-shrink: 0;
     margin-top: 3px;
 }
+.creative-left-subtitle-description{
+    color: #344054;
+    padding-left: 30px;
+    padding-bottom: 24px;
+}
 
+/* creative-service-right */
+.creative-service-right-rounded{
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    padding: 10px;
+    border: 1px solid #98A2B3;
+}
 /* Responsive */
 @media (max-width: 1024px) {
     nav {
