@@ -930,6 +930,13 @@ form {
         padding: 20px;
         flex-wrap: wrap;
         gap: 16px;
+        justify-content: center;
+    }
+
+    nav > a:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .banner {
