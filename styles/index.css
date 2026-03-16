@@ -606,7 +606,7 @@ main {
     gap: 24px;
 }
 .client-review{
-    display: flex;
+    /* display: flex; */
     padding: 24px 37px;
 }
 .client-photo img {
