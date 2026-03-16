@@ -32,21 +32,29 @@
 <body class="poppins-thin">
     <header>
         <!-- nav -->
-        <nav class="">
-            <a href=""><img class="" src="assets/Logo.png" alt=""> </a>
-            <ul class="menu">
-                <li class=""><a class="" href="">Home</a></li>
-                <li class=""><a href="">Service</a></li>
-                <li class=""><a href="">Portfolio</a></li>
-                <li class=""><a href="">Reviews</a></li>
-                <li class=""><a href="">Pricing</a></li>
-                <li class=""><a href="">White level</a></li>
-
+        <nav>
+            <a href=""><img src="assets/Logo.png" alt="Raaya Social"></a>
+            <ul class="menu" id="nav-menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Reviews</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">White level</a></li>
+                <li class="menu-mobile-buttons">
+                    <button class="nav-btn-login nunito">Login</button>
+                    <button class="btn-book nunito">Book a demo</button>
+                </li>
             </ul>
-            <div class="">
+            <div class="nav-buttons">
                 <button class="nav-btn-login nunito">Login</button>
                 <button class="btn-book nunito">Book a demo</button>
             </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
         <!-- banner -->
         <div class="banner">
@@ -345,7 +353,7 @@
                 <img src="assets/clientsStories/group 2.png" alt="">
                 <img src="assets/clientsStories/group 3.png" alt="">
                 <img src="assets/clientsStories/group 4.png" alt="">
-                <img src="assets/clientsStories/group 5.png" alt="">
+                <!-- <img src="assets/clientsStories/group 5.png" alt=""> -->
             </div>
         </div>
 
@@ -590,6 +598,23 @@
             </form>
         </div>
     </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', function () {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('menu-open');
+        });
+
+        // Close menu when a link is clicked
+        navMenu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('menu-open');
+            });
+        });
+    </script>
 </body>
 
 </html>

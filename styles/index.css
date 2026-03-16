@@ -53,6 +53,15 @@ nav {
     gap: 32px;
 }
 
+/* hide hamburger and mobile-only buttons on desktop */
+.hamburger {
+    display: none;
+}
+
+.menu-mobile-buttons {
+    display: none;
+}
+
 .menu li a {
     padding: 10px;
     text-decoration: none;
@@ -230,9 +239,6 @@ main {
 }
 
 .creative-provide {
-    /* display: flex; */
-    align-items: flex-start;
-    gap: 0;
     background-color: #FFFFFF;
     padding: 36px 32px;
     border-radius: 16px;
@@ -318,10 +324,27 @@ main {
     padding: 20px 24px;
     background-color: #FFFFFF;
     cursor: pointer;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.creative-service-right-card:hover {
+    border-color: #A657E7;
+    box-shadow: 0 4px 20px rgba(166, 87, 231, 0.15);
+    transform: translateY(-2px);
+}
+
+.creative-service-right-card:hover .creative-service-right-title {
+    color: #A657E7;
+}
+
+.creative-service-right-card:hover .creative-service-right-circle {
+    border-color: #A657E7;
+    background-color: rgba(166, 87, 231, 0.08);
 }
 
 .creative-service-right-card.active {
     border-color: #A657E7;
+    box-shadow: 0 4px 20px rgba(166, 87, 231, 0.15);
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -362,9 +385,13 @@ main {
     border-radius: 50%;
     border: 1.5px solid #98A2B3;
     flex-shrink: 0;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
 }
 
-.creative-service-right-circle:hover {}
+.creative-service-right-circle:hover {
+    border-color: #A657E7;
+    background-color: rgba(166, 87, 231, 0.1);
+}
 
 .creative-service-right-circle.checked {
     background: #A657E7;
@@ -626,7 +653,7 @@ main {
 
 .client-photo {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
 .client-review {
@@ -866,6 +893,26 @@ form {
         gap: 24px;
     }
 
+    .creative-service {
+        padding: 60px 40px 40px;
+    }
+
+    .creative-service-title {
+        font-size: 36px;
+    }
+
+    .creative-provide {
+        padding: 28px 24px;
+    }
+
+    .creative-left {
+        padding-right: 32px;
+    }
+
+    .creative-service-right {
+        padding-left: 32px;
+    }
+
     .short-form-section {
         padding: 48px 40px;
         gap: 40px;
@@ -927,26 +974,106 @@ form {
 
 @media (max-width: 768px) {
     nav {
-        padding: 20px;
-        flex-wrap: wrap;
-        gap: 16px;
-        justify-content: center;
+        padding: 16px 20px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        gap: 0;
     }
 
-    nav > a:first-child {
-        width: 100%;
+    .nav-buttons {
+        display: none;
+    }
+
+    .hamburger {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        z-index: 100;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 26px;
+        height: 2px;
+        background-color: #101828;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .menu {
+        display: none;
+        list-style: none;
+    }
+
+    .menu.menu-open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        border-radius: 0 0 16px 16px;
+        padding: 8px 0 20px;
+        gap: 0;
+        z-index: 99;
+    }
+
+    .menu.menu-open li a {
+        display: block;
+        padding: 14px 24px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #344054;
+        border-bottom: 1px solid #F2F4F7;
+        text-decoration: none;
+    }
+
+    .menu.menu-open li a:hover {
+        background-color: #F9F5FF;
+        color: #A657E7;
+    }
+
+    .menu-mobile-buttons {
+        display: flex;
+        gap: 12px;
+        padding: 16px 24px 4px;
+        border-bottom: none !important;
+    }
+
+    .menu-mobile-buttons .nav-btn-login,
+    .menu-mobile-buttons .btn-book {
+        flex: 1;
+        font-size: 15px;
+        padding: 10px 16px;
+        border-radius: 24px;
+        cursor: pointer;
     }
 
     .banner {
         padding-left: 20px;
         padding-right: 20px;
-    }
-
-    .menu {
-        gap: 16px;
-        flex-wrap: wrap;
     }
 
     .banner-section-one {
@@ -1008,9 +1135,17 @@ form {
         font-size: 28px;
     }
 
+    .creative-text-description {
+        font-size: 14px;
+    }
+
     .creative-provide {
+        padding: 24px 16px;
+    }
+
+    .creative-provide-left-right {
         flex-direction: column;
-        gap: 32px;
+        gap: 0;
     }
 
     .creative-left {
@@ -1021,8 +1156,21 @@ form {
         width: 100%;
     }
 
+    .creative-left-title {
+        font-size: 18px;
+    }
+
     .creative-service-right {
         padding-left: 0;
+        padding-top: 24px;
+        width: 100%;
+    }
+
+    .creative-service-right-card {
+        padding: 16px 18px;
+    }
+
+    .creative-get-started-btn {
         width: 100%;
     }
 
@@ -1118,6 +1266,54 @@ form {
 
     .menu {
         display: none;
+    }
+
+    .creative-service {
+        padding: 40px 16px 24px;
+    }
+
+    .creative-service-title {
+        font-size: 22px;
+    }
+
+    .creative-text-description {
+        font-size: 13px;
+        padding-bottom: 28px;
+    }
+
+    .creative-provide {
+        padding: 20px 14px;
+    }
+
+    .creative-left-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .creative-left-subtitle h3 {
+        font-size: 14px;
+    }
+
+    .creative-left-subtitle-description {
+        font-size: 13px;
+        padding-left: 28px;
+    }
+
+    .creative-service-right-title {
+        font-size: 13px;
+    }
+
+    .creative-service-right-card {
+        padding: 14px 16px;
+    }
+
+    .creative-get-started {
+        padding-top: 24px;
+    }
+
+    .creative-get-started-btn {
+        width: 100%;
+        font-size: 16px;
     }
 
     .raw-video-section {
