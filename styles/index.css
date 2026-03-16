@@ -20,6 +20,10 @@ body {}
 
 }
 
+.lato-thin {
+  font-family: "Lato", sans-serif;
+ 
+}
 /* title */
 .title {
     font-size: 48px;
@@ -504,7 +508,7 @@ main {
     background-color: #f5f5f5;
     padding-left: 120px;
     padding-right: 120px;
-    padding-bottom: 148px;
+    padding-bottom: 48px;
 }
 .video-title-color {
     color: #A554E6;
@@ -515,6 +519,7 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+    padding-bottom: 100px;
 }
 
 .video-card div {
@@ -540,17 +545,11 @@ main {
 /* .short-form */
 .short-form-section {
     background-color: #FFFFFF;
-    /* width: calc(100% + 240px); */
-    /* margin-left: -120px;
-    margin-right: -120px; */
     padding: 60px 120px;
-    padding-left: 120px;
-    padding-right: 120px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     gap: 64px;
-    margin-top: 80px;
 }
 
 .short-form-section > div:first-child {
@@ -868,9 +867,6 @@ form {
     }
 
     .short-form-section {
-        width: calc(100% + 80px);
-        margin-left: -40px;
-        margin-right: -40px;
         padding: 48px 40px;
         gap: 40px;
     }
@@ -885,6 +881,47 @@ form {
 
     .raw-video-title {
         font-size: 36px;
+    }
+
+    .social-card {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .video-section {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .video-section-two {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .client-stories {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .client-review-main-section {
+        padding: 32px 40px 28px;
+    }
+
+    .client-review-third {
+        padding: 0 40px;
+    }
+
+    .faq-question {
+        padding: 48px 40px;
+    }
+
+    .faq-title {
+        font-size: 36px;
+    }
+
+    footer {
+        padding: 40px;
+        gap: 40px;
     }
 }
 
@@ -948,9 +985,6 @@ form {
 
     .short-form-section {
         flex-direction: column;
-        width: calc(100% + 40px);
-        margin-left: -20px;
-        margin-right: -20px;
         padding: 40px 20px;
         gap: 32px;
     }
@@ -997,23 +1031,74 @@ form {
         flex-direction: column;
     }
 
-    .raw-video-contain>img {
+    .raw-video-contain > img {
         height: 200px;
     }
 
     .social-card {
         grid-template-columns: repeat(2, 1fr);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .video-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .video-section-two {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .video-card {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .client-stories {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .client-title {
+        font-size: 32px;
+        padding-top: 60px;
+        padding-bottom: 28px;
+    }
+
+    .client-photo {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .client-review-main-section {
         grid-template-columns: 1fr;
+        padding: 24px 20px;
+    }
+
+    .client-review-third {
+        flex-direction: column;
+        padding: 0 20px;
+        padding-bottom: 48px;
+    }
+
+    .faq-question {
+        padding: 40px 20px;
+    }
+
+    .faq-title {
+        font-size: 28px;
+    }
+
+    .faq-text-body-title {
+        font-size: 17px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 32px;
     }
 }
-
 
 @media (max-width: 480px) {
     .banner-right img {
@@ -1029,7 +1114,7 @@ form {
     }
 
     .raw-video-section {
-        padding: 32px 16px 32px;
+        padding: 32px 16px;
     }
 
     .raw-video-title {
@@ -1040,18 +1125,35 @@ form {
         font-size: 17px;
     }
 
-    .raw-video-contain>img {
+    .raw-video-contain > img {
         height: 160px;
     }
 
     .social-card {
         grid-template-columns: 1fr;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     .video-card {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .client-photo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .client-title {
+        font-size: 24px;
+    }
+
+    .faq-title {
+        font-size: 22px;
+    }
+
+    footer {
+        padding: 32px 16px;
+    }
 }
 
 .banner-right-title {
@@ -1080,6 +1182,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-top: 5px;
 }
 
 .footer-contact-title {
@@ -1091,16 +1194,16 @@ form {
 .footer-contact-form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
 }
 
 .footer-input {
     width: 100%;
-    padding: 16px 20px;
+    padding: 8px 0px 8px 15px;
     border: 1px solid #D0D5DD;
-    border-radius: 12px;
+    border-radius: 8px;
     font-size: 15px;
-    color: #344054;
+    color: #98A2B3;
     outline: none;
     box-sizing: border-box;
     font-family: inherit;
@@ -1117,11 +1220,11 @@ form {
 
 .footer-textarea {
     width: 100%;
-    padding: 16px 20px;
+    padding: 8px  12px ;
     border: 1px solid #D0D5DD;
-    border-radius: 12px;
-    font-size: 15px;
-    color: #344054;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #98A2B3;
     outline: none;
     box-sizing: border-box;
     font-family: inherit;
@@ -1139,15 +1242,15 @@ form {
 
 .footer-submit-btn {
     width: 100%;
-    padding: 16px;
-    background-color: #101828;
+    padding: 12px;
+    background-color: #1D1D1D;
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    font-family: inherit;
+    
 }
 
 .footer-submit-btn:hover {
