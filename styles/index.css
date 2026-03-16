@@ -137,6 +137,7 @@ nav {
 
 .text-description {
     font-size: 16px;
+    font-weight: 400;
     color: #344054;
 }
 
@@ -469,10 +470,13 @@ main {
 
 /* social contain */
 .social-card {
+    background-color: #f5f5f5;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     padding-top: 48px;
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
 .social-contain {
@@ -490,10 +494,16 @@ main {
 
 /* video */
 .video-section {
+    background-color: #f5f5f5;
+    padding-left: 120px;
+    padding-right: 120px;
     padding-top: 100px;
    
 }
 .video-section-two{
+    background-color: #f5f5f5;
+    padding-left: 120px;
+    padding-right: 120px;
     padding-bottom: 148px;
 }
 .video-title-color {
@@ -530,10 +540,12 @@ main {
 /* .short-form */
 .short-form-section {
     background-color: #FFFFFF;
-    width: calc(100% + 240px);
-    margin-left: -120px;
-    margin-right: -120px;
+    /* width: calc(100% + 240px); */
+    /* margin-left: -120px;
+    margin-right: -120px; */
     padding: 60px 120px;
+    padding-left: 120px;
+    padding-right: 120px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -589,6 +601,19 @@ main {
     border-radius: 24px;
 }
 /* client-stories */
+.client-stories{
+    background-color:#f5f5f5 ;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+.client-review-main-section {
+    background-color: #f5f5f5;
+    padding: 32px 120px 28px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    /* margin-top: 48px; */
+}
 .client-title{
     padding-top: 188px;
     padding-bottom: 48px;
@@ -605,10 +630,22 @@ main {
     grid-template-columns: repeat(5, 1fr);
     gap: 24px;
 }
-.client-review{
-    /* display: flex; */
+.client-review {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 159, 226, 0.33);
+    border-radius: 14px;
     padding: 24px 37px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
+.client-review-one-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
 .client-photo img {
     width: 100%;
     height: 320px;
@@ -617,20 +654,186 @@ main {
     display: block;
 }
 
-.client-name{
+.client-name {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
+    color: #101828;
 }
-.client-review-name-photo{
+.client-review-name-photo {
     display: flex;
+    align-items: center;
     gap: 12px;
 }
-.client-review-contain{
-    display: flex;
-    gap: 8px;
+.client-review-name-photo > div:first-child img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+     object-fit: cover; 
+   
 }
-.client-review-star{
+.client-review-contain {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    flex-shrink: 0;
+}
+.client-review-contain img {
+    width: 18px;
+    height: 18px;
+}
+.client-review-star {
+    font-size: 15px;
+    font-weight: 500;
     color: #1D2939;
+}
+.client-review-body {
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 24px; */
+    gap: 10px;
+}
+.client-review-body > img:first-child {
+    width: 24px;
+    height: auto;
+    opacity: 0.4;
+}
+.client-review-body p {
+    font-size: 15px;
+    color: #344054;
+    line-height: 1.7;
+}
+.client-review-quotation {
+    display: flex;
+    justify-content: flex-end;
+}
+.client-review-quotation img {
+    width: 24px;
+    height: auto;
+    opacity: 0.4;
+}
+.client-review-contain-star{
+    display: flex;
+    padding-left: 64px;
+    padding-bottom: 24px;
+}
+.client-review-description-third{
+    color: #344054;
+    font-weight: 400;
+    font-size: 16px;
+}
+/* third */
+.client-review-third{
+    background-color: #f5f5f5;
+    padding: 0 120px;
+    display: flex;
+    gap: 16px;
+    padding-bottom: 128px;
+}
+.client-review-third-card{
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 159, 226, 0.33);
+    border-radius: 14px;
+    padding: 24px 37px;
+    /* margin-top: 28px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 20px; */
+}
+/* FAQ Question */
+.faq-question{
+    padding: 48px 120px 48px;
+    
+    background-color: #f5f5f5;
+}
+.faq-title{
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    padding-bottom: 24px;
+}
+.faq-title-color{
+    color: #A554E6;
+}
+.faq-text-description{
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    color: #1D2939;
+}
+.faq-question-body{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.faq-text-body-description{
+    color: #949494;
+    font-weight: 400;
+    font-size: 18px;
+}
+.faq-text-body-title{
+    color: #212121;
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 12px;
+}
+.faq-text-body-title-contain{
+    display: flex;
+    justify-content: space-between;
+}
+.faq-text-body-title-contain img {
+    width: 24px;
+    object-fit: contain;
+}
+.faq-text-body-contain{
+    padding: 24px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+/* footer */
+footer{
+    padding: 46px 120px 56px;
+    display: flex;
+    gap: 80px;
+}
+.footer-title{
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 16px;
+}
+.footer-body{
+    padding: 32px 0;
+}
+.footer-btn{
+    display: flex;
+    gap: 24px;
+}
+.footer-btn-login{
+    color: #000000;
+    border: 1px solid #D0D5DD;
+    padding: 8px 27px;
+    border-radius: 24px;
+}
+.footer-title-two{
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 16px;
+   
+}
+.footer-body-two h1{
+
+    font-weight: 400;
+    font-size: 16px;
+    color: #344054;
+}
+.footer-title-three{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.footer-title-four{
+    
 }
 /* Responsive */
 @media (max-width: 1024px) {
@@ -796,6 +999,10 @@ main {
 
     .video-card {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .client-review-main-section {
+        grid-template-columns: 1fr;
     }
 }
 
