@@ -2,7 +2,7 @@
 
 > A modern, fully responsive landing page for a short-form video content agency — built with pure HTML & CSS.
 
-![Raaya Social](assets/Logo.png)
+![Raaya Social](https://img.shields.io/badge/Raaya-Social-A657E7?style=for-the-badge&logo=youtube&logoColor=white)
 
 ---
 
