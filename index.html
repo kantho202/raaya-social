@@ -285,48 +285,86 @@
             <h1 class="title">Videos <span><img src="assets/Rectangle 6500.png" alt=""></span>For <span
                     class="video-title-color">business</span></h1>
             <div class="video-card">
-                <div>
-                    <img src="assets/videos/Image Container.png" alt="">
+                <div class="video-card-item">
+                    <div class="video-wrapper">
+                        <video poster="assets/videos/Image Container.png" muted loop playsinline>
+                            <source src="" type="video/mp4">
+                        </video>
+                        
+                    </div>
                     <h1 class="video-title">Health & Wealth</h1>
                 </div>
-                <div>
-                    <img src="assets/videos/Image Container (2).png" alt="">
+                <div class="video-card-item">
+                    <div class="video-wrapper">
+                        <video poster="assets/videos/Image Container (2).png" muted loop playsinline>
+                            <source src="" type="video/mp4">
+                        </video>
+                        
+                    </div>
                     <h1 class="video-title">Financial services</h1>
                 </div>
-                <div>
-                    <img src="assets/videos/Group 1321314468 (2).png" alt="">
+                <div class="video-card-item">
+                    <div class="video-wrapper">
+                        <video poster="assets/videos/Group 1321314468 (2).png" muted loop playsinline>
+                            <source src="" type="video/mp4">
+                        </video>
+                        
+                    </div>
                     <h1 class="video-title">Real estate</h1>
                 </div>
-                <div>
-                    <img src="assets/videos/Group 1321314468 (3).png" alt="">
+                <div class="video-card-item">
+                    <div class="video-wrapper">
+                        <video poster="assets/videos/Group 1321314468 (3).png" muted loop playsinline>
+                            <source src="" type="video/mp4">
+                        </video>
+                        
+                    </div>
                     <h1 class="video-title">Home services</h1>
                 </div>
             </div>
-
         </div>
         <!-- video-section-2 -->
         <div class="video-section-two">
             <h1 class="title">Videos <span><img src="assets/Rectangle 6500.png" alt=""></span>For <span
                     class="video-title-color">business</span></h1>
             <div class="video-card">
-                <div>
-                    <img src="assets/videos/video-5.png" alt="">
+                <div class="video-card-item">
+                    <div class="video-wrapper">
+                        <video poster="assets/videos/video-5.png" muted loop playsinline>
+                            <source src="" type="video/mp4">
+                        </video>
+                        
+                    </div>
                     <h1 class="video-title">Health & Wealth</h1>
                 </div>
-                <div>
-                    <img src="assets/videos/video-6.png" alt="">
+                <div class="video-card-item">
+                    <div class="video-wrapper">
+                        <video poster="assets/videos/video-6.png" muted loop playsinline>
+                            <source src="" type="video/mp4">
+                        </video>
+                        
+                    </div>
                     <h1 class="video-title">Financial services</h1>
                 </div>
-                <div>
-                    <img src="assets/videos/video-7.png" alt="">
+                <div class="video-card-item">
+                    <div class="video-wrapper">
+                        <video poster="assets/videos/video-7.png" muted loop playsinline>
+                            <source src="" type="video/mp4">
+                        </video>
+                        
+                    </div>
                     <h1 class="video-title">Real estate</h1>
                 </div>
-                <div>
-                    <img src="assets/videos/video-8.png" alt="">
+                <div class="video-card-item">
+                    <div class="video-wrapper">
+                        <video poster="assets/videos/video-8.png" muted loop playsinline>
+                            <source src="" type="video/mp4">
+                        </video>
+                        
+                    </div>
                     <h1 class="video-title">Home services</h1>
                 </div>
             </div>
-
         </div>
         <!--short-form  -->
         <div class="short-form-section">
@@ -349,11 +387,12 @@
             <h1 class="client-title">Client Stories See<span><img src="assets/Rectangle 6500.png" alt=""></span>
                 What <br> <span class="client-title-color">Our Partners Say</span></h1>
             <div class="client-photo">
-                <img src="assets/clientsStories/Group.png" alt="">
-                <img src="assets/clientsStories/Group 2.png" alt="">
-                <img src="assets/clientsStories/Group 3.png" alt="">
-                <img src="assets/clientsStories/Group 4.png" alt="">
-                <!-- <img src="assets/clientsStories/group 5.png" alt=""> -->
+                <img src="assets/clientsStories/Group.png" alt="Client story 6">
+                <!-- <img src="assets/clientsStories/group 1.png" alt="Client story 1"> -->
+                <img src="assets/clientsStories/Group 2.png" alt="Client story 2">
+                <img src="assets/clientsStories/Group 3.png" alt="Client story 3">
+                <img src="assets/clientsStories/Group 4.png" alt="Client story 4">
+                <!-- <img src="assets/clientsStories/group 5.png" alt="Client story 5"> -->
             </div>
         </div>
 
@@ -612,6 +651,25 @@
             link.addEventListener('click', function () {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('menu-open');
+            });
+        });
+        // Video hover play/pause
+        document.querySelectorAll('.video-wrapper').forEach(function (wrapper) {
+            const video = wrapper.querySelector('video');
+            const btn = wrapper.querySelector('.video-play-btn');
+            if (!video) return;
+            wrapper.addEventListener('mouseenter', function () {
+                if (video.currentSrc) { video.play(); }
+                if (btn) btn.style.opacity = '0';
+            });
+            wrapper.addEventListener('mouseleave', function () {
+                video.pause();
+                video.currentTime = 0;
+                if (btn) btn.style.opacity = '1';
+            });
+            wrapper.addEventListener('click', function () {
+                if (video.paused) { video.play(); if (btn) btn.style.opacity = '0'; }
+                else { video.pause(); if (btn) btn.style.opacity = '1'; }
             });
         });
     </script>
