@@ -7,7 +7,7 @@ button {
     cursor: pointer;
 }
 
-body {}
+
 
 /* font  */
 .poppins-thin {
@@ -177,15 +177,12 @@ nav {
 }
 
 /* main section */
-main {
-    /* padding: 27px 120px; */
-}
+
 
 .clients {
     display: flex;
     align-items: center;
     gap: 32px;
-    /* padding: 40px 120px; */
     padding:70px 120px;
     box-sizing: border-box;
     width: 100%;
@@ -683,7 +680,6 @@ main {
 
 
 .video-book-demo-btn {
-    /* padding-top: 32px; */
     background: linear-gradient(to bottom, #B564F7, #6A2F9B);
     color: #FFFFFF;
     font-size: 16px;
@@ -802,7 +798,6 @@ main {
 .client-review-body {
     display: flex;
     flex-direction: column;
-    /* padding-top: 24px; */
     gap: 10px;
 }
 .client-review-body > img:first-child {
@@ -987,7 +982,6 @@ form {
     padding: 15px;
 }
 .footer-line {
-    /* padding: 40px 0px 24px 0; */
    border: 1px solid #D0D5DD;
 }
 
