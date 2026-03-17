@@ -8,7 +8,7 @@
 
 ## 🌐 Live Demo
 
-**[raaya-social.vercel.app](https://raaya-social.vercel.app)**
+**[raaya-social.vercel.app](https://raaya-social-theta.vercel.app/)**
 
 ---
 
