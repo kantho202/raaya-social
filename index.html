@@ -646,32 +646,7 @@
             navMenu.classList.toggle('menu-open');
         });
 
-        // Close menu when a link is clicked
-        navMenu.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('menu-open');
-            });
-        });
-        // Video hover play/pause
-        document.querySelectorAll('.video-wrapper').forEach(function (wrapper) {
-            const video = wrapper.querySelector('video');
-            const btn = wrapper.querySelector('.video-play-btn');
-            if (!video) return;
-            wrapper.addEventListener('mouseenter', function () {
-                if (video.currentSrc) { video.play(); }
-                if (btn) btn.style.opacity = '0';
-            });
-            wrapper.addEventListener('mouseleave', function () {
-                video.pause();
-                video.currentTime = 0;
-                if (btn) btn.style.opacity = '1';
-            });
-            wrapper.addEventListener('click', function () {
-                if (video.paused) { video.play(); if (btn) btn.style.opacity = '0'; }
-                else { video.pause(); if (btn) btn.style.opacity = '1'; }
-            });
-        });
+       
     </script>
 </body>
 

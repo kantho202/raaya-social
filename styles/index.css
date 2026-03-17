@@ -67,11 +67,15 @@ nav {
 }
 
 .menu li a {
+    
     padding: 10px;
     text-decoration: none;
     font-weight: 400;
     font-size: 18px;
     color: rgba(52, 64, 84, 1);
+}
+.menu  :hover{
+    color: #A657E7;
 }
 
 .nav-btn-login {
@@ -210,7 +214,7 @@ main {
     display: flex;
     align-items: center;
     gap: 32px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .clients-advertisement img {
@@ -1225,6 +1229,7 @@ form {
 
     .clients-advertisement {
         gap: 20px;
+        flex-wrap: wrap;
     }
 
     .clients-advertisement img {
