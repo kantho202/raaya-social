@@ -12,6 +12,27 @@
 
 ---
 
+## 📖 Project Overview
+
+**Raaya Social** is a static marketing landing page for a short-form video content agency. Built with plain HTML, CSS, and vanilla JavaScript — no frameworks, no build tools.
+
+**What it does:**
+The page markets a subscription-based service where businesses get short-form video content (Reels, TikToks, YouTube Shorts) for a flat monthly rate starting at $99. It walks visitors through the value proposition, showcases sample work, displays client reviews, and ends with a contact form.
+
+**Tech choices:**
+Pure HTML/CSS was the right call here — it's a single marketing page that needs fast load times and easy Vercel deployment. CSS Grid and Flexbox handle all layouts. Vanilla JS covers just two things: the hamburger menu toggle and video hover play/pause.
+
+**Key design decisions:**
+- Purple `#A657E7` as the primary accent color — buttons, hovers, gradients, borders
+- `#F5F5F5` alternating section backgrounds to create visual separation without hard borders
+- Every interactive element (cards, nav links, buttons, FAQ items) has a consistent hover pattern — lift + purple border + shadow
+- Three breakpoints (1024px, 768px, 480px) cover tablet and mobile, with the hamburger menu kicking in at 768px
+
+**Structure:**
+One `index.html`, one `styles/index.css`, one `javascript/index.js`, and an `assets/` folder with all images. Everything deploys as-is to Vercel with zero configuration.
+
+---
+
 ## ✨ Features
 
 - **Fully Responsive** — optimized for desktop, tablet (1024px), and mobile (768px / 480px)
